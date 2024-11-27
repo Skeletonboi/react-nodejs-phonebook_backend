@@ -1,0 +1,21 @@
+{
+  "name": "phonebook_server",
+  "version": "0.0.1",
+  "description": "server for phonebook app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "dev": "nodemon index.js",
+    "build:ui": "rm -rf dist && cd ../phonebook && npm run build && cp -r dist ../react-nodejs-phoenbook_backend",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+  },
+  "author": "Victor Yip",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
